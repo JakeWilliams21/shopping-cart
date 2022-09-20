@@ -1,0 +1,33 @@
+.nav-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 64px
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    padding: 0px 32px;
+    background-color: #374e62;
+    color: white;
+    gap: 16px;
+}

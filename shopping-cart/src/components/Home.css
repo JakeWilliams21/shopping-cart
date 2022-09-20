@@ -1,0 +1,24 @@
+.home-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-image {
+    background-image: url('https://img.abercrombie.com/is/image/anf/A-JULWK4-HOMEPAGE-M-DENIM.jpg');
+    width: 750px;
+    height: 700px;
+    margin-top: 32px;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+button {
+    border-radius: 0;
+    background-color: #374e62;
+    color: white;
+    border: none;
+    padding: 8px;
+}
