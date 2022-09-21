@@ -1,10 +1,19 @@
 import React, {useState} from "react";
+import Card from "./Card";
 import './Shop.css'
 
 const Shop = (props) => {
     return (
-        <div>
-            <h1>Shop Page</h1>
+        <div className = 'shop-parent'>
+            <div className = 'shop-grid'>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,40 @@
+.card-parent {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 500px;
+    width: 250px;
+}
+
+.item-image {
+    height: 90%;
+    background-color: rgb(231, 230, 230);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+select {
+    height: 31px;
+    border-radius: 0;
+}

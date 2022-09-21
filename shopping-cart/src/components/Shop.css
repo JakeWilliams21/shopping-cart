@@ -1,0 +1,14 @@
+.shop-parent {
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.shop-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0px;
+}
