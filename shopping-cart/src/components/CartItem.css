@@ -1,0 +1,19 @@
+.item-parent {
+    display: flex;
+    text-align: left;
+    height: 500px;
+    width: 500px;
+    gap: 9px;
+}
+
+.item-image {
+    height: 60%;
+    background-color: rgb(231, 230, 230);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

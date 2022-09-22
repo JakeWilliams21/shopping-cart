@@ -2,16 +2,26 @@ import React, {useState} from "react";
 import './Card.css'
 
 const Card = (props) => {
+    const [qty, setQty] = useState(0)
+
+    const handleClick = (e) => {
+        props.qty(qty, props.id)
+    }
+
+    const handleChange = (e) => {
+        setQty(prevState => (e.target.value))
+    }
+
     return (
         <div className="card-parent">
-            <div><img alt = 'jeans' src = 'https://img.abercrombie.com/is/image/anf/KIC_131-2451-2394-276_prod1?policy=product-medium'/></div>
+            <div><img alt = 'jeans' src = {props.url} /></div>
             <div className = 'card-description'>
                 <div className = 'card-left'>
-                    <h4>Jeans</h4>
-                    <p>$75</p>
+                    <h4>{props.name}</h4>
+                    <p>${props.price}</p>
                 </div>
                 <div className = 'card-right'>
-                    <select name = 'quantity'>
+                    <select onChange = {handleChange} name = 'quantity'>
                         <optgroup label = 'Qty'>
                             <option value = '1'>1</option>
                             <option value = '2'>2</option>
@@ -20,7 +30,7 @@ const Card = (props) => {
                             <option value = '5'>5</option>
                         </optgroup>
                     </select>
-                    <button>Add to Cart</button>
+                    <button onClick = {handleClick}>Add to Cart</button>
                 </div>
             </div>
             
