@@ -17,7 +17,7 @@ const Navbar = (props) => {
                     </ul>
                 </div>
                 <div className = 'right-nav'>
-                    <p style = {{visibility: cart === 0 ? 'hidden' : 'visible'}} >{cart}</p>
+                    <p style = {{visibility: props.amount === 0 ? 'hidden' : 'visible'}} >{props.amount}</p>
                     <Link style = {{color: 'black', textDecoration: 'none'}} to = '/cart'><ShoppingCartIcon /></Link>
                 </div>
             </div>

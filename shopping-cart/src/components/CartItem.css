@@ -1,9 +1,10 @@
 .item-parent {
     display: flex;
     text-align: left;
-    height: 500px;
-    width: 500px;
-    gap: 9px;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    gap: 16px;
 }
 
 .item-image {

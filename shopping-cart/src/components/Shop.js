@@ -1,15 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Card from "./Card";
 import './Shop.css'
 
 const Shop = (props) => {
-    const [cart, setCart] = useState({})
+    const [cart, setCart] = useState([])
     const items = props.items
 
     const handleAdd = (qty, id) => {
-        console.log('qty:', qty);
-        console.log('id:', id);
+        let newItem = {
+            id: id,
+            qty: qty
+        }
+
+        setCart(prevCart => ([...prevCart, newItem]))
+
     }
+
+    useEffect(() => {
+        props.add(cart)
+    }, [cart])
 
     return (
         <div className = 'shop-parent'>
