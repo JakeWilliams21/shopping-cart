@@ -18,6 +18,7 @@ const Shop = (props) => {
 
     useEffect(() => {
         props.add(cart)
+        console.log(cart);
     }, [cart])
 
     return (

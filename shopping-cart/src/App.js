@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import Navbar from './components/Navbar';
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 
 function App() {
   const [items, setItems] = useState([
@@ -57,21 +57,29 @@ function App() {
 
 
   const handleAdd = (cart) => {
-    
+    let newCart = []
 
     for (let i = 0; i < cart.length; i++) {
-      setCart(prevCart => ([
-        ...prevCart,
-        {
+      let newItem = {}
+    
+      newItem =  {
           name: items[cart[i].id].name,
           price: items[cart[i].id].price,
           url: items[cart[i].id].url,
           qty: cart[i].qty,
           id: i + 1
         }
-      ]))
+      newCart.push(newItem)
     }
+
+    console.log('New Cart:', newCart);
+    setCart(prevCart => (newCart))
   }
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart])
+
   return (
     <div className="App">
       <BrowserRouter>
